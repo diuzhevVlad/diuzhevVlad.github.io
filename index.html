@@ -1,0 +1,540 @@
+<!--
+ ┌──────────────────────────────────────────────────────────────────────┐
+ │ @name         CV generator                                           │
+ │ @author       Léa Gallier                                            │
+ │ @version      1.0                                                    │
+ │ @created      2022-12-19                                             │
+ │ @modified     2023-03-17                                             │
+ │ @description  Resume CV with dark/light mode and PDF export          │
+ └──────────────────────────────────────────────────────────────────────┘
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Владислав Дюжев</title>
+
+        <!-- Import Fontawesome -->
+        <script src="https://kit.fontawesome.com/cb81440751.js" crossorigin="anonymous"></script>
+
+        <!-- Import stylesheets in CSS3 -->
+        <link rel="stylesheet" href="assets/stylesheets/style.css" type="text/css">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/pictures/favicon/favicon.ico">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/pictures/favicon/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/pictures/favicon/favicon.ico">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/pictures/favicon/favicon.ico">
+        <link rel="icon" type="image/png" sizes="512x512" href="assets/pictures/favicon/favicon.ico">
+    </head>
+
+    <body>
+        <header class="l-header" id="header">
+            <!-- Nav menu -->
+            <nav class="nav bd-container">
+                <a href="#" class="nav_logo">Владислав Дюжев</a>
+                <div class="nav_menu" id="nav-menu">
+                    <ul class="nav_list">
+
+                        <li class="nav_item">
+                            <a href="#home" class="nav_link active-link">
+                                <i class="fa-solid fa-house nav_icon"></i>Home
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#profile" class="nav_link">
+                                <i class="fa-solid fa-user nav_icon"></i>Profile
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#skills" class="nav_link">
+                                <i class="fa-solid fa-computer nav_icon"></i>Skills
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#languages" class="nav_link">
+                                <i class="fa-solid fa-comments nav_icon"></i>Languages
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#experience" class="nav_link">
+                                <i class="fa-solid fa-briefcase nav_icon"></i>Experiences
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#certificates" class="nav_link">
+                                <i class="fa-solid fa-graduation-cap nav_icon"></i>Certificates
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#education" class="nav_link">
+                                <i class="fa-solid fa-book-bookmark nav_icon"></i>Education
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#interests" class="nav_link">
+                                <i class="fa-solid fa-icons nav_icon"></i>Interests
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main bd-container">
+            <!-- Resume CV -->
+            <div class="resume" id="area-cv">
+                <div class="resume_left">
+
+                    <!-- HOME -->
+                    <section class="home" id="home">
+                        <div class="home_container section bd-grid">
+
+                            <div class="home_data bd-grid">
+                                <img src="assets/pictures/profile.png" alt="Icon picture" class="home_img" id="home-img">
+                                <!--<img alt="Icon picture" class="home_img" id="home-img">-->
+                                <h1 class="home_title"><b>Владислав Дюжев</b></h1>
+                                <h3 class="home_profession">Robotics & ML engineer</h3>
+                                <div>
+                                    <a download="" id="download-button" class="home_button-movil">Download</a>
+                                </div>
+                            </div>
+
+                            <div class="home_address bd-grid">
+                                <span class="home_information">
+                                    <i class="fa-solid fa-location-dot home_icon"></i> Санкт-Петербург - РФ
+                                </span>
+                                <span class="home_information">
+                                    <a href="mailto:vladdiuzhev@gmail.com" class="home_link">
+                                        <i class="fa-solid fa-envelope home_icon"></i> vladdiuzhev@gmail.com
+                                    </a>
+                                </span>
+                                <span class="home_information">
+                                    <a href="tel:+79516611199" class="home_link">
+                                        <i class="fa-solid fa-phone home_icon"></i> +79516611199
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Theme change button -->
+                        <i class="fa-solid fa-moon change-theme" title="Theme" id="theme-button"></i>
+
+                        <!-- Button to generate and download the pdf. Available for desktop. -->
+                        <i class="fa-solid fa-download generate-pdf" title="Generate PDF" id="resume-button"></i>
+
+                    </section>
+
+                    <!-- SOCIAL -->
+                    <section class="social section">
+                        <h2 class="section-title">АККАУНТЫ</h2>
+
+                        <div class="social_container bd-grid">
+                            <a href="https://github.com/diuzhevVlad" target="_blank" class="social_link">
+                                <i class="fa-brands fa-github social_icon"></i> @diuzhevVlad
+                            </a>
+                            <a href="https://t.me/diuzhev" target="_blank" class="social_link">
+                                <i class="fa-brands fa-telegram social_icon"></i> @diuzhev
+                            </a>
+                            <!-- <a href="https://www.linkedin.com/in/leagallier76/" target="_blank" class="social_link">
+                                <i class="fa-brands fa-linkedin social_icon"></i> leagallier76
+                            </a> -->
+                        </div>
+                    </section>
+
+                    <!-- PROFILE -->
+                    <section class="profile section" id="profile">
+                        <h2 class="section-title">ОБО МНЕ</h2>
+
+                        <p class="profile_description">
+                            Я студент 4 курса программы "Робототехника и искусственный интеллект", университета ИТМО. С начала обучения вовлечен в проектную и научную деятельность. Сфера моих интересов связана с робототехникой и современными методами машинного обучения. Стараюсь принимать участие в различных хакатонах, олимпиадах, буткемпах и стажировках, позволяющих углубить мои знания и приобрести практические навыки. На данный момент работаю над дипломом, связанным с планированием движения мобильных роботов в сложных средах.
+                        </p>
+                    </section>
+
+                    <!-- SKILLS  -->
+                    <section class="skills section" id="skills">
+                        <h2 class="section-title">НАВЫКИ</h2>
+                        <div class="skills_container">
+                            <div class="skills_content bd-grid">
+                                <div class="skills_name">
+                                    <span class="skills_text">Python</span>
+                                    <div class="skills_box">
+                                        <span class="skills_progress" style="width: 85%;"></span>
+                                    </div>
+                                </div>
+                                <div class="skills_name">
+                                    <span class="skills_text">C++</span>
+                                    <div class="skills_box">
+                                        <span class="skills_progress" style="width: 75%;"></span>
+                                    </div>
+                                </div>
+                                <div class="skills_name">
+                                    <span class="skills_text">ROS 1/2</span>
+                                    <div class="skills_box">
+                                        <span class="skills_progress" style="width: 95%;"></span>
+                                    </div>
+                                </div>
+                                <div class="skills_name">
+                                    <span class="skills_text">ML & CV</span>
+                                    <div class="skills_box">
+                                        <span class="skills_progress" style="width: 80%;"></span>
+                                    </div>
+                                </div>
+                                <div class="skills_name">
+                                    <span class="skills_text">Control & Planning</span>
+                                    <div class="skills_box">
+                                        <span class="skills_progress" style="width: 90%;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <!-- LANGUAGES -->
+                    <section class="languages section" id="languages">
+                        <h2 class="section-title">Языки</h2>
+
+                        <div class="languages_container">
+                            <ul class="languages_content bd-grid">
+                                <li class="languages_name">
+                                    <span class="languages_text">Русский</span>
+                                    <span class="languages_stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                </li>
+                                <li class="languages_name">
+                                    <span class="languages_text">Английский</span>
+                                    <span class="languages_stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star languages_stars_checked"></i>
+                                    </span>
+                                </li>
+                                <li class="languages_name">
+                                    <span class="languages_text">Немецкий</span>
+                                    <span class="languages_stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star languages_stars_checked"></i>
+                                        <i class="fa-solid fa-star languages_stars_checked"></i>
+                                        <i class="fa-solid fa-star languages_stars_checked"></i>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </div>
+
+                <div class="resume_right">
+
+                    <!-- EXPERIENCE -->
+                    <section class="experience section" id="experience">
+                        <h2 class="section-title">Опыт работы</h2>
+
+                        <div class="experience_container bd-grid">
+                            <div class="experience_content">
+                                <div class="experience_time">
+                                    <span class="experience_rounder"></span>
+                                    <span class="experience_line"></span>
+                                </div>
+                                <div class="experience_data bd-grid">
+                                    <h3 class="experience_title">ИНЖЕНЕР-РОБОТОТЕХНИК</h3>
+                                    <span class="experience_company">Международная лаборатория "Геометрические методы управления и приложения", Университет ИТМО - РФ</span>
+                                    <span class="experience_year">Август 2022 - текущее время</span>
+                                    <p class="experience_description">
+                                        В ходе работы в лаборатории принимал участие во многих проектах, связанных как с интеграцией интеллектуальных систем для решения промышленных задач, так и с научно-исследовательской деятельностью.
+                                        Основными направлениями работы являлись: создание систем управления киберфизическими системами, приложение методов машинного обучения к задачам робототехники, навигация и планирование.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="experience_content">
+                                <div class="experience_time">
+                                    <span class="experience_rounder"></span>
+                                    <span class="experience_line"></span>
+                                </div>
+                                <div class="experience_data bd-grid">
+                                    <h3 class="experience_title">СПЕЦИАЛИСТ ПО КОМПЬЮТЕРНОМУ ЗРЕНИЮ</h3>
+                                    <span class="experience_company">Стажировка в компании "Геоскан" - РФ</span>
+                                    <span class="experience_year">Ноябрь 2022 - Январь 2023</span>
+                                    <p class="experience_description">
+                                        Разрабатывал комплекс программ для анализа аэрофотоснимков сельскохозяйственной зоны с целью оценки урожайности и выявления проблемных участков в ходе плановых инспекций с помощью БПЛА.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="experience_content">
+                                <div class="experience_time">
+                                    <span class="experience_rounder"></span>
+                                </div>
+                                <div class="experience_data bd-grid">
+                                    <h3 class="experience_title">ИНЖЕНЕР-РАЗРАБОТЧИК АВТОНОМНЫХ РОБОТОТЕХНИЧЕСКИХ СИСТЕМ</h3>
+                                    <!-- <span class="experience_company">Internship | IES Ingénierie - France</span> -->
+                                    <span class="experience_year">Декабрь 2023 - Июнь 2024</span>
+                                    <p class="experience_description">
+                                        Принимал участие в разработке системы управления для автономного использования БПЛА (как низкоуровнего контроллера, так и высокоуровневого планировщика движения). 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- CERTIFICATES -->
+                    <section class="certificate section" id="certificates">
+                        <h2 class="section-title">Достижения</h2>
+
+                        <div class="certificate_container bd-grid">
+                            <div class="certificate_content">
+                                <div class="certificate_item">
+                                    <span class="certificate_rounder"></span>
+                                </div>
+                                <div class="certificate_data bd-grid">
+                                    <h3 class="certificate_year">2023</h3>
+                                    <span class="certificate_title">Хакатон StarLine «Беспилотное будущее» - 1 место
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="certificate_content">
+                                <div class="certificate_item">
+                                    <span class="certificate_rounder"></span>
+                                </div>
+                                <div class="certificate_data bd-grid">
+                                    <h3 class="certificate_year">2023</h3>
+                                    <span class="certificate_title">Хакатон «StarLine Беспилотный» (Квалификация) - 1 место
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="certificate_content">
+                                <div class="certificate_item">
+                                    <span class="certificate_rounder"></span>
+                                </div>
+                                <div class="certificate_data bd-grid">
+                                    <h3 class="certificate_year">2023</h3>
+                                    <span class="certificate_title">НТО "Летающая робототехника" - призер
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="certificate_content">
+                                <div class="certificate_item">
+                                    <span class="certificate_rounder"></span>
+                                </div>
+                                <div class="certificate_data bd-grid">
+                                    <h3 class="certificate_year">2021</h3>
+                                    <span class="certificate_title">Открытые зимние состязания Санкт-Петербурга по робототехнике 2021 - 1 место
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- EDUCATION -->
+                    <section class="education section" id="education">
+                        <h2 class="section-title">Образование</h2>
+
+                        <div class="education_container bd-grid">
+                            <div class="education_content">
+                                <div class="education_time">
+                                    <span class="education_rounder"></span>
+                                    <span class="education_line"></span>
+                                </div>
+                                <div class="education_data bd-grid">
+                                    <h3 class="education_title">Бакалавриат "Робототехника и искусственный интеллект"</h3>
+                                    <span class="education_studies">Университет ИТМО - РФ</span>
+                                    <span class="education_year">2021 - 2025</span>
+                                </div>
+                            </div>
+                            <div class="education_content">
+                                <div class="education_time">
+                                    <span class="education_rounder"></span>
+                                </div>
+                                <div class="education_data bd-grid">
+                                    <h3 class="education_title">Программа Bonus-track "Методы анализа данных"</h3>
+                                    <span class="education_studies">Университет ИТМО - РФ</span>
+                                    <span class="education_year">2022 - 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- CONFERENCES-->
+                    <section class="certificate section" id="certificates">
+                        <h2 class="section-title">КОНФЕРЕНЦИИ И ПУБЛИКАЦИИ</h2>
+
+                        <div class="certificate_container bd-grid">
+                            <div class="certificate_content">
+                                <div class="certificate_item">
+                                    <span class="certificate_rounder"></span>
+                                </div>
+                                <div class="certificate_data bd-grid">
+                                    <h3 class="certificate_year">2024</h3>
+                                    <span class="certificate_title">Конгресс молодых ученых - "ИССЛЕДОВАНИЕ ПРИМЕНЕНИЯ ДИФФУЗИОННЫХ МОДЕЛЕЙ В РОБОТОТЕХНИЧЕСКИХ ЗАДАЧАХ"
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="certificate_content">
+                                <div class="certificate_item">
+                                    <span class="certificate_rounder"></span>
+                                </div>
+                                <div class="certificate_data bd-grid">
+                                    <h3 class="certificate_year">2023</h3>
+                                    <span class="certificate_title">Конгресс молодых ученых - "РАЗРАБОТКА СИСТЕМЫ АНАЛИЗА АЭРОСНИМКОВ ДЛЯ ОПРЕДЕЛЕНИЯ ПРОРАСТАЕМОСТИ СЕЛЬСКОХОЗЯЙСТВЕННЫХ КУЛЬТУР"
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- PROJECTS -->
+                    <section class="certificate section" id="certificates">
+                        <h2 class="section-title">ПРОЕКТЫ</h2>
+
+                        <div class="certificate_container bd-grid">
+                            <div class="certificate_content">
+                                <div class="certificate_item">
+                                    <span class="certificate_rounder"></span>
+                                </div>
+                                <div class="certificate_data bd-grid">
+                                    <span class="certificate_title">Разработка и экспериментальная апробация алгоритма и процедуры идентификации и синтеза основанных на данных динамических моделей манипуляционных роботов для систем силомоментного управления - <b>ПАО "Сбербанк России"</b>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="certificate_content">
+                                <div class="certificate_item">
+                                    <span class="certificate_rounder"></span>
+                                </div>
+                                <div class="certificate_data bd-grid">
+                                    <span class="certificate_title">Исследование композитных обучаемых гибридных моделей и алгоритмов сенсорно-моторной координации в задачах манипулирования в динамических средах - <b>ПАО "Сбербанк России"</b>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="certificate_content">
+                                <div class="certificate_item">
+                                    <span class="certificate_rounder"></span>
+                                </div>
+                                <div class="certificate_data bd-grid">
+                                    <span class="certificate_title">Автономные интеллектуальные системы - <b>Университет ИТМО</b>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="certificate_content">
+                                <div class="certificate_item">
+                                    <span class="certificate_rounder"></span>
+                                </div>
+                                <div class="certificate_data bd-grid">
+                                    <span class="certificate_title">Разработка программы управления роботом-манипулятором UFACTORY xArm 6 для безмаркерной, автоматической коммутации разъема с использованием машинного зрения - <b>ООО "Конструкторское бюро РАСКАТ"</b>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="certificate_content">
+                                <div class="certificate_item">
+                                    <span class="certificate_rounder"></span>
+                                </div>
+                                <div class="certificate_data bd-grid">
+                                    <span class="certificate_title">Разработка программы управления роботом-манипулятором для решения задачи коммутации разъема с использованием машинного зрения - <b>ООО "Конструкторское бюро РАСКАТ"</b>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="certificate_content">
+                                <div class="certificate_item">
+                                    <span class="certificate_rounder"></span>
+                                </div>
+                                <div class="certificate_data bd-grid">
+                                    <span class="certificate_title">Разработка энергоэффективных интеллектуальных синхронных электродвигателей со встроенным датчиком положения - <b>АО "ДИАКОНТ"</b>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="certificate_content">
+                                <div class="certificate_item">
+                                    <span class="certificate_rounder"></span>
+                                </div>
+                                <div class="certificate_data bd-grid">
+                                    <span class="certificate_title">Технологии воплощенного интеллекта в робототехнике - <b>МИНОБРНАУКИ РОССИИ</b>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        
+                    </section>
+
+                    <!-- INTERESTS -->
+                    <!-- <section class="interests section" id="interests">
+                        <h2 class="section-title">Interests</h2>
+                        <div class="interests_container bd-grid">
+                            <div class="interests_content">
+                                <i class="fa-solid fa-paw interests_icon"></i>
+                                <span class="interests_name">Animals</span>
+                            </div>
+                            <div class="interests_content">
+                                <i class="fa-solid fa-dragon interests_icon"></i>
+                                <span class="interests_name">Dinosaurs</span>
+                            </div>
+                            <div class="interests_content">
+                                <i class="fa-solid fa-film interests_icon"></i>
+                                <span class="interests_name">Movies/Series</span>
+                            </div>
+                            <div class="interests_content">
+                                <i class="fa-solid fa-leaf interests_icon"></i>
+                                <span class="interests_name">Nature</span>
+                            </div>
+                            <div class="interests_content">
+                                <i class="fa-solid fa-code interests_icon"></i>
+                                <span class="interests_name">Program</span>
+                            </div>
+                            <div class="interests_content">
+                                <i class="fa-solid fa-gamepad interests_icon"></i>
+                                <span class="interests_name">Video games</span>
+                            </div>
+                        </div>
+                    </section> -->
+
+                </div>
+            </div>
+        </main>
+
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class="fa-solid fa-arrow-up scrolltop_icon"></i>
+        </a>
+
+        <!-- HTML2PDF.js -->
+            <!-- Version 0.8.0 -->
+        <!-- <script src="assets/javascripts/html2pdf.v0.8.0.bundle.min.js"></script> -->
+            <!-- Version 0.9.3 -->
+        <script src="assets/javascripts/html2pdf.v0.9.3.bundle.min.js"></script>
+
+        <!-- Main Javascript file -->
+        <script src="assets/javascripts/main.js"></script>
+    </body>
+
+</html>
