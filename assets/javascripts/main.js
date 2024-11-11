@@ -120,9 +120,20 @@ const downloadButton = document.getElementById('download-button');
 
 downloadButton.addEventListener('click', () => {
     if (document.body.classList.contains(darkTheme)) {
-        downloadButton.href = "assets/pdf/myResumeCV-dark.pdf";
+        downloadButton.href = "assets/pdf/VladislavDiuzhev-dark.pdf";
     } else {
-        downloadButton.href = "assets/pdf/myResumeCV-light.pdf";
+        downloadButton.href = "assets/pdf/VladislavDiuzhev-light.pdf";
+    }
+});
+
+let resumeButton_ = document.getElementById("resume-button");
+
+resumeButton_.addEventListener('click', () => {
+    console.log("hui")
+    if (document.body.classList.contains(darkTheme)) {
+        resumeButton_.href = "assets/pdf/VladislavDiuzhev-dark.pdf";
+    } else {
+        resumeButton_.href = "assets/pdf/VladislavDiuzhev-light.pdf";
     }
 });
 
@@ -144,40 +155,40 @@ function removeScaleCV() {
 let areaCV = document.getElementById('area-cv');
 
 // Button
-let resumeButton = document.getElementById("resume-button");
+// let resumeButton = document.getElementById("resume-button");
 
-// Generate PDF with html2pdf.js
-function generateResume() {
-    // PDF filename change depending of the light/dark mode
-    if (document.body.classList.contains(darkTheme)) {
-        // html2pdf.js options
-        let opt = {
-            margin: 0,
-            filename: 'myResumeCV-dark.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { scale: 4, useCORS: true },
-            jsPDF: { format: 'a4', orientation: 'portrait' }
-        };
-        html2pdf(areaCV, opt);
-    } else {
-        // html2pdf.js options
-        let opt = {
-            margin: 0,
-            filename: 'myResumeCV-light.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { scale: 4, useCORS: true },
-            jsPDF: { format: 'a4', orientation: 'portrait' }
-        };
-        html2pdf(areaCV, opt);
-    }
-}
+// // Generate PDF with html2pdf.js
+// function generateResume() {
+//     // PDF filename change depending of the light/dark mode
+//     if (document.body.classList.contains(darkTheme)) {
+//         // html2pdf.js options
+//         let opt = {
+//             margin: 0,
+//             filename: 'VladislavDiuzhev-dark.pdf',
+//             image: { type: 'jpeg', quality: 0.98 },
+//             html2canvas: { scale: 4, useCORS: true },
+//             jsPDF: { format: 'a4', orientation: 'portrait' }
+//         };
+//         html2pdf(areaCV, opt);
+//     } else {
+//         // html2pdf.js options
+//         let opt = {
+//             margin: 0,
+//             filename: 'VladislavDiuzhev-light.pdf',
+//             image: { type: 'jpeg', quality: 0.98 },
+//             html2canvas: { scale: 4, useCORS: true },
+//             jsPDF: { format: 'a4', orientation: 'portrait' }
+//         };
+//         html2pdf(areaCV, opt);
+//     }
+// }
 
-// Action executed by clicking on the button => generation of the final PDF CV CV
-resumeButton.addEventListener("click", () => {
-    // Adapt the area of the PDF
-    addScaleCV();
-    // Generate the PDF
-    generateResume();
-    // Remove adaptation after 1 second (you can choose to set more than 1 second if your PDF download time is long)
-    setTimeout(removeScaleCV, 1000);
-});
+// // Action executed by clicking on the button => generation of the final PDF CV CV
+// resumeButton.addEventListener("click", () => {
+//     // Adapt the area of the PDF
+//     addScaleCV();
+//     // Generate the PDF
+//     generateResume();
+//     // Remove adaptation after 1 second (you can choose to set more than 1 second if your PDF download time is long)
+//     setTimeout(removeScaleCV, 1000);
+// });
