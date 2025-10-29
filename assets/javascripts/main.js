@@ -120,9 +120,9 @@ const downloadButton = document.getElementById('download-button');
 
 downloadButton.addEventListener('click', () => {
     if (document.body.classList.contains(darkTheme)) {
-        downloadButton.href = "assets/pdf/VladislavDiuzhev-dark.pdf";
+        downloadButton.href = "assets/pdf/VladislavDiuzhev_resume.pdf";
     } else {
-        downloadButton.href = "assets/pdf/VladislavDiuzhev-light.pdf";
+        downloadButton.href = "assets/pdf/VladislavDiuzhev_resume.pdf";
     }
 });
 
@@ -131,9 +131,9 @@ let resumeButton_ = document.getElementById("resume-button");
 resumeButton_.addEventListener('click', () => {
     console.log("hui")
     if (document.body.classList.contains(darkTheme)) {
-        resumeButton_.href = "assets/pdf/VladislavDiuzhev-dark.pdf";
+        resumeButton_.href = "assets/pdf/VladislavDiuzhev_resume.pdf";
     } else {
-        resumeButton_.href = "assets/pdf/VladislavDiuzhev-light.pdf";
+        resumeButton_.href = "assets/pdf/VladislavDiuzhev_resume.pdf";
     }
 });
 
@@ -164,7 +164,7 @@ let areaCV = document.getElementById('area-cv');
 //         // html2pdf.js options
 //         let opt = {
 //             margin: 0,
-//             filename: 'VladislavDiuzhev-dark.pdf',
+//             filename: 'VladislavDiuzhev_resume.pdf',
 //             image: { type: 'jpeg', quality: 0.98 },
 //             html2canvas: { scale: 4, useCORS: true },
 //             jsPDF: { format: 'a4', orientation: 'portrait' }
@@ -174,7 +174,7 @@ let areaCV = document.getElementById('area-cv');
 //         // html2pdf.js options
 //         let opt = {
 //             margin: 0,
-//             filename: 'VladislavDiuzhev-light.pdf',
+//             filename: 'VladislavDiuzhev_resume.pdf',
 //             image: { type: 'jpeg', quality: 0.98 },
 //             html2canvas: { scale: 4, useCORS: true },
 //             jsPDF: { format: 'a4', orientation: 'portrait' }
